@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<script id="allow-copy_script"
+  src="chrome-extension://kkemgiffjdndikokhpoecoloebgeibde/content_scripts/copy.js"></script>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <style data-merge-styles="true"></style>
+  <style data-merge-styles="true"></style>
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jianyi Liao's Resume</title>
+  <style>
+    :root {
+      --primary-color: #186abd;
+      /* 蓝色，用于姓名和链接 */
+      --secondary-color: #16599c;
+      /* 深蓝色，用于标题 */
+      --text-color: #333333;
+      /* 深灰色，用于正文 */
+      --background-color: #f1f3f5;
+      /* 白色背景 */
+      --accent-color: #3a94a0;
+      /* 青色，用于链接高亮 */
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: var(--background-color);
+      color: var(--text-color);
+      line-height: 1.5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 2rem;
+      background-color: var(--background-color);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 2em;
+    }
+
+    .contact-info {
+      width: 70%;
+    }
+
+    .contact-info h1 {
+      color: var(--primary-color);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 2.5em;
+      margin: 0;
+    }
+
+    .contact-info p {
+      margin: 0.5em 0;
+    }
+
+    .position-header {
+      margin-bottom: 8px;
+    }
+
+    .company-date {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-top: 2px;
+    }
+
+    .position-company {
+      color: #444;
+      font-size: 0.95em;
+      max-width: 70%;
+    }
+
+    .position-date {
+      color: #666;
+      font-size: 0.9em;
+      white-space: nowrap;
+    }
+
+    .photo {
+      width: 25%;
+      text-align: right;
+      margin-top: 1em;
+      /* 添加上边距，让照片下移 */
+    }
+
+    .photo img {
+      width: 150px;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 5px;
+      box-shadow: 0 0 5px #ccc;
+    }
+
+    .section {
+      margin-bottom: 2em;
+    }
+
+    .section-title {
+      color: var(--secondary-color);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.8em;
+      margin-bottom: 0.5em;
+      border-bottom: 2px solid var(--secondary-color);
+      padding-bottom: 0.3em;
+    }
+
+    ul {
+      padding-left: 1em;
+      margin: 0;
+    }
+
+    li {
+      margin-bottom: 0.5em;
+    }
+
+    ul ul {
+      padding-left: 1.5em;
+    }
+
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .education-entry {
+      margin-bottom: 1em;
+    }
+
+    .detail-line {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.9em;
+    }
+
+    .award-title {
+      color: var(--text-color);
+      font-weight: bold;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .course-title {
+    font-family: "Times New Roman", Georgia, serif;
+    font-style: italic !important;
+    /* 花体字样 */
+    font-size: inherit;
+    font-weight: inherit;
+    color: inherit;
+    line-height: inherit;
+    }
+
+    .award-title .date {
+      text-align: right;
+    }
+
+    /* 响应式设计 */
+    @media (max-width: 768px) {
+      .header {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .contact-info,
+      .photo {
+        width: 100%;
+      }
+
+      .photo {
+        margin-top: 1em;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <!-- 头部信息 -->
+    <div class="header">
+      <div class="contact-info">
+        <h1>Jianyi Liao</h1>
+        <p>
+          <i class="fa fa-envelope"></i> Email:JianyLiao@stu.hit.edu.cn</a>
+        </p>
+        <p>
+          <i class="fa fa-envelope"></i> Telephone:+86 180-0705-0151</a>
+        </p>
+      </div>
+      <!-- <div class="photo">
+                <img src="./XiaoLong Li&#39;s Resume_files/XiaoLong.jpg" alt="XiaoLong Li">
+            </div> -->
+    </div>
+
+    <!-- 教育背景 -->
+    <div class="section">
+      <h2 class="section-title">Education</h2>
+      <div class="education-entry">
+        <p><strong>Harbin Institute of Technology</strong></p>
+        <div class="detail-line">
+          <span>B.Sc. in Optoelectronic Information Science and Engineering,School of Physics</span>
+
+          <span>Sep 2022 ~ Present</span>
+        </div>
+        <div class="detail-line">
+          <span>GPA: 88.0 (rank:3/21)</span>
+        </div>
+        <div class="detail-line"> 
+          <span>Minor in Applied Physics</span>
+          <span>Sep 2023 ~ Present</span>
+        </div><br>
+        <div class="course-title">
+          <span><em>Related courses：Electrodynamics，Quantum Mechanics，Mathematical Methods for Physics，Laser Principle，Fourier optics，Advanced Optics</em></span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 科研兴趣 -->
+    <div class="section">
+      <h2 class="section-title">Research Interests</h2>
+      <span class="detail-line">Optical Signal Processing，Nanophotonics，Computational Optical Imaging.</span><br>
+    </div>
+
+    <!-- 奖项与成就 -->
+    <div class="section">
+      <h2 class="section-title">Awards &amp; Achievements</h2>
+      <ul>
+        <li>
+          <span class="award-title">February 2024 - Meritorious Winner of COMAP's Interdisciplinary Contest in Modeling (ICM)</span>
+          <em>Theme: The Great Lakes Dance Together</em><br>
+          Team leader, responsible for planning module code development.
+        </li>
+        <li>
+          <span class="award-title">June 2023,2024 - Outstanding Student(Academic excellence)</span>
+        </li>
+        <li>
+          <span class="award-title">October 2023,2024 - People's Scholarship</span><br>
+        </li>
+      </ul>
+    </div>
+
+    <!-- 科研经历 -->
+    <div class="section">
+      <h2 class="section-title">Research Experience</h2>
+          <div class="award-title">
+            <span>Application of structured light in machine vision</span>
+            <span class="date">September 2022 ~ July 2023</span>
+          </div>
+          <div class="course-title">
+            <span>Supervisors：Prof. Lin Jie</span>
+          </div>
+      <ul>
+          <li>
+            <span>
+              Using three gratings to modulate the coherent light produced by a helium-neon laser, thereby generating specific structured light, and then projecting it after filtering.
+            </span>
+          </li>
+          <li>
+            <span>
+              Collect and process structured light projected onto an object using MATLAB and point clouds to construct a three-dimensional model of the object from a specific fixed angle.
+            </span>
+          </li>
+          <li>
+            <span>
+              Stitch together the three-dimensional models obtained from multiple angles to obtain a relatively complete measurement result of the object model.
+            </span>
+          </li>
+      </ul><br>    
+     
+      <div class="award-title">
+        <span>Flexible plantar sensor array for gait monitoring</span>
+        <span class="date">October 2023 ~ June 2024</span>
+      </div>
+      <div class="course-title">
+        <span>Supervisors：Prof. Lin Jie</span>
+      </div>
+
+      <ul>
+        <li>
+          <span>
+            Based on the structure of the sensor array, design a timing circuit to obtain and collect information from each resistor array channel by channel using a microcontroller.
+          </span>
+        </li>
+        <li>
+          <span>
+            The system is integrated into a PCB circuit, employing a Bluetooth module for wireless transmission, followed by DA conversion on a computer, thus acquiring the sensor's instantaneous pressure state.
+          </span>
+        </li>
+        <li>
+          <span>
+            By positioning the wearable system on the plantar surface for real-time measurement, we can learn about individuals' gait patterns and variations, making it applicable for medical measurements and applications.
+          </span>
+        </li>
+    </ul>    
+    </div>
+
+    <!-- 技能 -->
+    <div class="section">
+      <h2 class="section-title">Skills</h2>
+      <ul>
+        <li><strong>Programming:</strong> MATLAB,C,Latex,HTML</li>
+        <li><strong>Experiment:</strong> Set up the optical path, Adjust the laser, Use the oscilloscope, Use various optical sensors according to the scenario.</li>
+        <li><strong>Soft Skills:</strong> Demonstrates great patience and focus in research I paticipant.</li>
+      </ul>
+    </div>
+
+    
+    </div>
+  </div>
